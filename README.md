@@ -14,6 +14,7 @@ This project contains examples and exercises for learning refactoring techniques
 │   ├── 05-split-loop/                  # Split loops, slide statements
 │   ├── 06-replace-loop-with-pipeline/  # Use reduce() for totals
 │   ├── 07-split-phase/                 # Separate calculation & formatting
+│   ├── 08-polymorphism/                # Replace conditionals with polymorphism
 │   └── testData.js                     # Shared test data
 ├── exercises/                          # Practice exercises
 ├── tests/                              # Test files
@@ -51,6 +52,7 @@ The classic theater billing example demonstrating step-by-step refactoring:
 | 5 | `05-split-loop/` | Split Loop, Slide Statements | Separate accumulation loops |
 | 6 | `06-replace-loop-with-pipeline/` | Replace Loop with Pipeline | Use `reduce()` for totals |
 | 7 | `07-split-phase/` | Split Phase | Separate calculation from formatting |
+| 8 | `08-polymorphism/` | Replace Conditional with Polymorphism | Use subclasses for play types |
 
 Each step includes detailed comments explaining the refactoring technique applied.
 
@@ -65,6 +67,10 @@ Each step includes detailed comments explaining the refactoring technique applie
 - **Slide Statements** - Moving related code together
 - **Replace Loop with Pipeline** - Using map/reduce instead of for loops
 - **Split Phase** - Separating calculation from formatting
+- **Replace Type Code with Subclasses** - Using inheritance for type variations
+- **Replace Constructor with Factory Function** - Encapsulating object creation
+- **Replace Conditional with Polymorphism** - Using method dispatch instead of switch
+- **Move Function** - Moving logic to appropriate classes
 
 ## Best Practices
 
