@@ -18,7 +18,8 @@ import { statement as statement03 } from '../chapter-01/03-replace-temp-with-que
 import { statement as statement04 } from '../chapter-01/04-extract-volume-credits/statement.js';
 import { statement as statement05 } from '../chapter-01/05-split-loop/statement.js';
 import { statement as statement06 } from '../chapter-01/06-replace-loop-with-pipeline/statement.js';
-import { statement as statement07, htmlStatement } from '../chapter-01/07-split-phase/statement.js';
+import { statement as statement07, htmlStatement as htmlStatement07 } from '../chapter-01/07-split-phase/statement.js';
+import { statement as statement08, htmlStatement as htmlStatement08 } from '../chapter-01/08-polymorphism/statement.js';
 
 // The expected output that all versions should produce
 const expectedPlainText = `Statement for BigCo
@@ -90,7 +91,17 @@ describe('Chapter 1: Refactoring Progression', () => {
     });
 
     test('htmlStatement() produces correct HTML output', () => {
-      expect(htmlStatement(invoice, plays)).toBe(expectedHtml);
+      expect(htmlStatement07(invoice, plays)).toBe(expectedHtml);
+    });
+  });
+
+  describe('Step 08: Replace Conditional with Polymorphism', () => {
+    test('statement() produces same output as original', () => {
+      expect(statement08(invoice, plays)).toBe(expectedPlainText);
+    });
+
+    test('htmlStatement() produces correct HTML output', () => {
+      expect(htmlStatement08(invoice, plays)).toBe(expectedHtml);
     });
   });
 
@@ -194,6 +205,7 @@ describe('Chapter 1: Consistency Across Versions', () => {
     { name: '05-split-loop', fn: statement05 },
     { name: '06-replace-loop-with-pipeline', fn: statement06 },
     { name: '07-split-phase', fn: statement07 },
+    { name: '08-polymorphism', fn: statement08 },
   ];
 
   const testCases = [
